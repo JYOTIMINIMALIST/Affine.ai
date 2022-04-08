@@ -1,0 +1,48 @@
+[07-Jul-2021 12:17:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[07-Jul-2021 12:17:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[08-Jul-2021 07:59:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
+[09-Jul-2021 10:02:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/rouk1cqimajv/public_html/projects/affine/wp-content/themes/affine/index.php on line 15
