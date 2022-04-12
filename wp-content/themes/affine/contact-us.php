@@ -36,7 +36,9 @@
                                 <img src="<?php the_sub_field('appropriate_category_image'); ?>" alt="">
                                 <h3 class="font30 commonsMedium"><?php the_sub_field('appropriate_category_heading'); ?></h3>
                                 <p class="font24"><?php the_sub_field('appropriate_category_content'); ?></p>
-                                <a href="" data-toggle="modal" data-target="#allContact<?php echo $counter; ?>" class="cta2 sparkleBtn"><?php the_sub_field('cta_button_text'); ?></a>
+								<?php if (!empty(get_sub_field ('contact_link'))) { ?><a href="<?php echo esc_url( the_sub_field('contact_link') ); ?>" class="cta2 sparkleBtn" target="_blank"><?php the_sub_field('cta_button_text'); ?></a> <?php } else{ ?> 
+                                <a href="" data-toggle="modal" data-target="#allContact<?php echo $counter; ?>" class="cta2 sparkleBtn"><?php the_sub_field('cta_button_text'); ?></a><?php }?>
+								
                             </div>
                         <?php $counter=$counter+1; endwhile; ?>
         		    <?php endif; ?>
