@@ -101,7 +101,7 @@
         <div class="choseTopicHolder" id="ourHolder">
             <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                $args = array('post_type' => 'whitepaper-post','posts_per_page' => 6, 'paged' => $paged,'order' => 'DESC');
+                $args = array('post_type' => 'whitepaper-post','posts_per_page' => 6 , 'paged' => $paged,'order' => 'DESC');
                 $the_query = new WP_Query( $args );
                 while ( $the_query->have_posts() ) : $the_query->the_post();
 
@@ -118,7 +118,12 @@
                 else :    
                 $tax = '';                    
                 endif; 
+      
+             
                 ?>
+             
+
+                 
                 <div class="choseTopicWhitepaperContent item <?php echo $tax ?>">
                     <a href="<?php the_permalink();?>">
                         <div class="whitepaperTopicImg">
@@ -153,12 +158,16 @@
                     </a>
                 </div>
                 <?php endwhile; ?>
-            <div class='page-nav-container'>
+
+                <span class="has-no-post" style="display:none;text-align: center;
+line-height: 100px;">Data Not Found ! </span>
+                   </div>
+    </div>
+     <div class='page-nav-container'>
                 <?php wp_pagenavi(array('query' => $the_query)); ?>
             </div>
             <?php wp_reset_postdata(); ?>
-        </div>
-    </div>
+
 </section>
 
 <section class="interestedSection">
@@ -241,7 +250,26 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
-
+<script type='text/javascript'>
+jQuery('#filterOptions li a').click(function() {
+jQuery(function() {
+    var count=0;
+    var numItems = $('.item').length;
+    jQuery(".item").each(function() {
+        if(jQuery(this).css("display")=='none'){
+            count++;}
+        });
+     //alert("total display none items :"+count);
+    if(count<numItems){
+        $('.has-no-post').css('display', 'none');
+      //  $('#librarCardHolder').css('margin-bottom', '0px');
+    } else {
+        $('.has-no-post').css('display', 'block');
+        //$('#librarCardHolder').css('margin-bottom', '100px');
+    }
+    });
+});
+</script>
 <?php get_footer(); ?>
 <script>
     $(".scrollDown").click(function() {

@@ -37,6 +37,8 @@
                                 <h3 class="font30 commonsMedium"><?php the_sub_field('appropriate_category_heading'); ?></h3>
                                 <p class="font24"><?php the_sub_field('appropriate_category_content'); ?></p>
                                 <a href="" data-toggle="modal" data-target="#allContact<?php echo $counter; ?>" class="cta2 sparkleBtn"><?php the_sub_field('cta_button_text'); ?></a>
+
+                                
                             </div>
                         <?php $counter=$counter+1; endwhile; ?>
         		    <?php endif; ?>
@@ -326,3 +328,6 @@ $( ".singaporeAddress" ).click(function() {
     <?php endwhile; ?>
 <?php endif; ?>
 </script>
+
+
+
