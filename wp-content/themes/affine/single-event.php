@@ -67,6 +67,7 @@
                             <?php while( have_rows('slide_content') ): the_row();?>
                                 <?php if( get_row_layout() == 'single_box' ): ?>
                                 <div class="interestedInnerSlider">
+									<a href="<?php echo get_sub_field('content_heading_link'); ?>">
                                     <div class="interestedCard">
                                         <?php $intrestedimage = get_sub_field('content_image');
                                             if( !empty( $intrestedimage ) ): ?>
@@ -76,6 +77,7 @@
                                             <h3 class="font24 commonsMedium"><?php the_sub_field('content_heading'); ?></h3>
                                         </div>
                                     </div>
+									</a>
                                 </div>
                                 
                                 <?php elseif( get_row_layout() == 'double_box' ): ?>
@@ -83,6 +85,7 @@
                                         <div class="interestedCardTwo">
                                             <?php if( have_rows('double_box_content') ): ?>
                                                 <?php while( have_rows('double_box_content') ): the_row(); ?>
+												<a href="<?php echo get_sub_field('content_heading_link'); ?>">
                                                     <div class="interestedLinkDiv">
                                                         <?php $intresteddoubleimage = get_sub_field('content_image');
                                                             if( !empty( $intresteddoubleimage ) ): ?>
@@ -94,6 +97,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+											</a>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
                                         </div>
