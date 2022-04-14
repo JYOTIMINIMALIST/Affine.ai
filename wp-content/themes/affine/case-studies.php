@@ -93,7 +93,7 @@
 <section class="chooseTopicSection">
     <div class="wrapper">
         <h2 class="font60 caslonGraphiqueEF colorG">Choose your topic</h2>
-        <div class="mobilechooseTopicFilter">
+      <div class="mobilechooseTopicFilter">
             <div class="showFilterMob">
                 <img src="<?php bloginfo('template_directory');?>/images/all-topic.png" alt="">ALL
             </div>
@@ -161,12 +161,15 @@
                     </a>
                 </div>
                 <?php endwhile; ?>
-            <div class='page-nav-container'>
+                <p class="has-no-post" style="display:none;">Data Not Found ! </p>
+
+        </div>
+    </div>
+
+      <div class='page-nav-container'>
                 <?php wp_pagenavi(array('query' => $the_query)); ?>
             </div>
             <?php wp_reset_postdata(); ?>
-        </div>
-    </div>
 </section>
 
 <section class="deliverSection" data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
@@ -180,7 +183,26 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
-
+<script type='text/javascript'>
+jQuery('#filterOptions li a').click(function() {
+jQuery(function() {
+    var count=0;
+    var numItems = $('.item').length;
+    jQuery(".item").each(function() {
+        if(jQuery(this).css("display")=='none'){
+            count++;}
+        });
+     //alert("total display none items :"+count);
+    if(count<numItems){
+        $('.has-no-post').css('display', 'none');
+      //  $('#librarCardHolder').css('margin-bottom', '0px');
+    } else {
+        $('.has-no-post').css('display', 'block');
+        //$('#librarCardHolder').css('margin-bottom', '100px');
+    }
+    });
+});
+</script>
 <?php get_footer(); ?>
 <script>
 $(".scrollDown").click(function() {

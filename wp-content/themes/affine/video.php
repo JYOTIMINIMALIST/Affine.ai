@@ -71,9 +71,13 @@
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = array('post_type' => 'video-post', 'posts_per_page' => 6, 'paged' => $paged, 'order' => 'DESC');
                     $the_query = new WP_Query($args);
+                    $count=$the_query->post_count;
+                   
+                    
                     while ($the_query->have_posts()) : $the_query->the_post();
 					
 					$terms = get_the_terms( $post->ID, 'video_categories' );
+
                     if ( $terms && ! is_wp_error( $terms ) ) : 
 
                     $links = array();
@@ -96,15 +100,22 @@
 						</div>
 						<h3 class="font24 commonsSemiBold colorG"><?php the_title(); ?></h3>
 					</div>
-                    <?php endwhile; ?>
-            <div class='page-nav-container'>
+                    <?php endwhile; ?> 
+
+                      <p class="has-no-post" style="display:none;">Data Not Found ! </p>
+
+
+
+          
+                    
+                </div>
+            </div>
+
+              <div class='page-nav-container'>
                 <?php wp_pagenavi(array('query' => $the_query)); ?>
             </div>
             <?php wp_reset_postdata(); ?>
 
-                    
-                </div>
-            </div>
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
@@ -120,7 +131,26 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
-
+<script type='text/javascript'>
+jQuery('#filterOptions li a').click(function() {
+jQuery(function() {
+    var count=0;
+    var numItems = $('.item').length;
+    jQuery(".item").each(function() {
+        if(jQuery(this).css("display")=='none'){
+            count++;}
+        });
+     //alert("total display none items :"+count);
+    if(count<numItems){
+        $('.has-no-post').css('display', 'none');
+      //  $('#librarCardHolder').css('margin-bottom', '0px');
+    } else {
+        $('.has-no-post').css('display', 'block');
+        //$('#librarCardHolder').css('margin-bottom', '100px');
+    }
+    });
+});
+</script>
 <?php get_footer(); ?>
 <script>
 $(".scrollDown").click(function() {
