@@ -29,7 +29,7 @@
 
                             <?php $ctaText = get_field('upcoming_cta_text'); ?>
                             <?php if (!empty($ctaText)) { ?>
-                                <a href="#bookyourslot" class="cta1"><?php echo $ctaText ?></a>
+                                <a href="#bookyourslot" class="cta1 regNow"><?php echo $ctaText ?></a>
                             <?php } ?>
                         </div>
                     </div>

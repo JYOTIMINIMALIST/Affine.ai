@@ -1202,3 +1202,9 @@ const setFilterButtonActive = (target) => {
 console.log(target);
 document.querySelector(`[data-filtertarget=${target}]`).classList.add("active");
 };
+
+$(".regNow").click(function() {
+  $('html,body').animate({
+      scrollTop: $("#bookyourslot").offset().top - 150}
+  );
+});
