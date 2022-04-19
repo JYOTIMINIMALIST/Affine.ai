@@ -1001,7 +1001,7 @@ ul#filterOptions li.active a{background: linear-gradient(152.97deg, rgba(255, 25
 .interestedOverlayText p{position: relative;padding-bottom: 10px;}
 .interestedOverlayText p::after{content: '';position: absolute;bottom: 0;left: 0;background: linear-gradient(101.24deg, #F05B5B -11.97%, #EC1A3E 43.96%, #7C51A0 123.01%, #6DCCE3 200.17%, #6DCCE3 226.22%);border-radius: 1px;width: 55px;height: 5px;}
 .interestedOverlayText h3{margin: 20px 0 40px;}
-.interestedLinkDiv{position: relative;border-radius: 5px;height: 90%; margin-bottom: 50px;}
+.interestedLinkDiv{position: relative;border-radius: 5px;height: 48%;}
 .interestedLinkDiv img{width: 100%;height: 100%;object-fit: cover;}
 .interestedLinkDiv::before{content: '';position: absolute;width: 100%;height: 100%;left: 0;top: 0;background: linear-gradient(0.19deg, #000000 1.44%, rgba(0, 0, 0, 0) 71.55%);border-radius: 5px;}
 .interestedLinkText{position: absolute;width: 100%;display: flex;justify-content: space-between;padding: 25px;bottom: 0;align-items: flex-end;}
@@ -1190,7 +1190,7 @@ ul.filter li.active{background: linear-gradient(152.97deg, rgba(255, 255, 255, 0
 .post-event-text .parts-text a {margin-left: 45px;}
 .slotdetails h1 {position: relative;margin-bottom: 62px;}
 .slotdetails h1::after {content: " ";position: absolute;width: 55px;height: 8px;left: 0px;top: 50px;background: linear-gradient(101.24deg, #F05B5B -11.97%, #EC1A3E 43.96%, #7C51A0 123.01%, #6DCCE3 200.17%, #6DCCE3 226.22%);border-radius: 2px;}
-.bookyourslot {margin-bottom: 60px; border: 0.5px solid rgb(4 167 201 / 35%);box-shadow: 0px 0px 10px 0px rgb(4 167 201 / 35%);background: linear-gradient(141.43deg, rgba(18, 31, 34, 0.45) 17.49%, rgba(255, 255, 255, 0) 89.31%, rgba(18, 31, 34, 0) 89.31%);backdrop-filter: blur(29.8667px);margin: auto;width: 64%;padding: 70px 0px;}
+.bookyourslot {border: 0.5px solid rgb(4 167 201 / 35%);box-shadow: 0px 0px 10px 0px rgb(4 167 201 / 35%);background: linear-gradient(141.43deg, rgba(18, 31, 34, 0.45) 17.49%, rgba(255, 255, 255, 0) 89.31%, rgba(18, 31, 34, 0) 89.31%);backdrop-filter: blur(29.8667px);margin: auto;width: 64%;padding: 70px 0px;}
 .form-details {display: flex;width: 100%;justify-content: space-between;}
 .form-details label {font-size: 14px;opacity: 0.5;position: absolute;margin: 0;top: -20px;left: 0px;}
 .form-details input {background-color: transparent;border: 0;width: 100%;font-size: 16px;padding: 10px;}
