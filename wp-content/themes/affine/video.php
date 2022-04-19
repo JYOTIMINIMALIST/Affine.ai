@@ -41,7 +41,7 @@
         <?php while (have_rows('affines_world_videos')) : the_row(); ?>
             <div class="wrapper">
                 <h2 class="font60 caslonGraphiqueEF colorG"><?php echo get_sub_field('section_heading'); ?></h2>
-                <div class="mobilechooseTopicFilter">
+                 <div class="mobilechooseTopicFilter">
                     <div class="showFilterMob">
                         <img src="<?php bloginfo('template_directory'); ?>/images/all-topic.png" alt="">ALL
                     </div>

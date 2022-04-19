@@ -115,17 +115,15 @@
     </div>
 </section>
 
-<section class="chooseTopicSection" id="chooseTopicSection">
- 
+
+<section class="chooseTopicSection">
     <div class="wrapper">
-        <h2 class="font60 caslonGraphiqueEF colorG"><?php echo get_field('choose_topic_heading'); ?></h2>
+        <h2 class="font60 caslonGraphiqueEF colorG">Choose your topic</h2>
         <div class="mobilechooseTopicFilter">
             <div class="showFilterMob">
-                <img src="<?php bloginfo('template_directory'); ?>/images/all-topic.png" alt="">ALL
-               
+                <img src="<?php bloginfo('template_directory');?>/images/all-topic.png" alt="">ALL
             </div>
-            <img src="<?php bloginfo('template_directory'); ?>/images/down-arrow.svg" alt="" class="downArrow">
-
+            <img src="<?php bloginfo('template_directory');?>/images/down-arrow.svg" alt="" class="downArrow">
         </div>
         <ul id="filterOptions">
             <li class="active"><a class="all"><img src="<?php bloginfo('template_directory');?>/images/all-topic.png" alt=""> All</a></li>
@@ -140,20 +138,20 @@
                         $termslug = strtolower($term->slug);
                         $icon = get_field('category_image', $term->taxonomy . '_' . $term->term_id);
                         echo '<li><a class="'.$termslug.'"><img src="'.$icon.'" alt="">'.$termname.'</a></li>';
-            
                     }
                 }
                 
             ?>
         </ul>
+
         <div class="choseTopicHolder" id="ourHolder">
-           <?php
+            <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                $args = array('post_type' => 'post','posts_per_page' => 6 , 'paged' => $paged,'order' => 'DESC');
+                $args = array('post_type' => 'post','posts_per_page' => 6, 'paged' => $paged,'order' => 'DESC');
                 $the_query = new WP_Query( $args );
                 while ( $the_query->have_posts() ) : $the_query->the_post();
 
-                $terms = get_the_terms( $post->ID, 'whitepaper_categories' );
+                $terms = get_the_terms( $post->ID, 'category' );
                 if ( $terms && ! is_wp_error( $terms ) ) : 
 
                 $links = array();
@@ -166,17 +164,11 @@
                 else :    
                 $tax = '';                    
                 endif; 
-      
-             
-                ?>
-			
-			
-			
-			
-            <div class="choseTopicWhitepaperContent item <?php echo $tax ?>">
+            ?>
+                     <div class="choseTopicWhitepaperContent item <?php echo $tax ?>">
                 <a href="<?php the_permalink();?>">
                 <div class="whitepaperTopicImg">
-                                <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) ?>" alt="">
+                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ) ?>" alt="">
                     <p class="font16"><?php echo get_field('blog_publish_date'); ?></p>
                     <img src="<?php bloginfo('template_directory'); ?>/images/news-arrow.png" alt="" class="choseTopicArrow">
                 </div>
@@ -203,20 +195,20 @@
                 </div>
             </a>
             </div>
-            <?php endwhile; ?>
-                   <div class="has-no-post" style="display:none;text-align: center;line-height: 100px;">Data Not Found ! </div>
+                <?php endwhile; ?>
+                <p class="has-no-post" style="display:none;">Data Not Found ! </p>
+
         </div>
+    </div>
 
       <div class='page-nav-container'>
                 <?php wp_pagenavi(array('query' => $the_query)); ?>
             </div>
             <?php wp_reset_postdata(); ?>
-
-    </div>
-
-      
-
 </section>
+
+
+
 
 
 

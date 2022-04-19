@@ -31,11 +31,11 @@
                                     <?php endwhile; ?>
                                 <?php endif; ?>
                             </div>
-                            <div class="searchDiv">
+                           <!--  <div class="searchDiv">
                                 <label>Search</label>
                                 <input type="text">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/search.png" alt="">
-                            </div>
+                                <img src="<?php //bloginfo('template_directory'); ?>/images/search.png" alt="">
+                            </div> -->
                             <div class="searchResultDiv">
                                 <ul id="filterOptions">
                                     <li class="active"><a>Data Analyst</a></li>
@@ -260,7 +260,8 @@
                     <?php if( have_rows('slide_content') ): ?>
                         <?php while( have_rows('slide_content') ): the_row();?>
                             <?php if( get_row_layout() == 'single_box' ): ?>
-                                <div class="interestedInnerSlider">
+                             <div class="interestedInnerSlider">
+                                <a href="<?php echo get_sub_field('content_heading_link'); ?>">
                                     <div class="interestedCard">
                                         <?php $singleboximage = get_sub_field('box_image');
                                             if( !empty( $singleboximage ) ): ?>
@@ -270,13 +271,16 @@
                                             <h4 class="font24 commonsSemiBold colorG"><?php the_sub_field('box_heading'); ?></h4>
                                         </div>
                                     </div>
+                                </a>
                                 </div>
-
+                         
                             <?php elseif( get_row_layout() == 'double_box' ): ?>
+                               
                                 <div class="interestedInnerSlider">
                                     <div class="interestedCardTwo">
                                         <?php if( have_rows('double_box_content') ): ?>
                                             <?php while( have_rows('double_box_content') ): the_row(); ?>
+                                                <a href="<?php echo get_sub_field('content_heading_link'); ?>">
                                                 <div class="interestedLinkDiv pool-party">
                                                     <?php $doubleboximage = get_sub_field('box_image');
                                                         if( !empty( $doubleboximage ) ): ?>
@@ -288,10 +292,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </a>
                                             <?php endwhile; ?>
                                         <?php endif; ?>
                                     </div>
                                 </div>
+                            </a>
                             <?php endif;?>
                         <?php endwhile; ?>
                     <?php endif; ?>

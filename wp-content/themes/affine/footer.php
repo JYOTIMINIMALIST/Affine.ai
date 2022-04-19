@@ -111,6 +111,8 @@
 <script type='text/javascript' src='<?php bloginfo('template_directory');?>/js/jquery-3.3.1.min.js'></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/plugins.js"></script>
 <script src="<?php bloginfo('template_directory');?>/js/custom.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js.map"></script>
+
 <?php wp_footer(); ?>
 </body>
 

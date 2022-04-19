@@ -31,8 +31,7 @@
     var site_url = "<?php echo get_site_url(); ?>";
     </script>
 
-    <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/whitepaper.js"></script>
-
+   
     <?php wp_head(); ?>
 </head>
 
