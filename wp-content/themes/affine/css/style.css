@@ -2326,8 +2326,8 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .mobileInnerMenu .innerMobileMenuText p{font-size: 16px;text-transform: capitalize;color:rgba(255, 255, 255, 0.8);margin-bottom: 15px;}
     .mobileInnerMenu .innerMobileMenuText h4{font-size: 16px;text-transform: capitalize;color:rgba(255, 255, 255, 0.8);margin-bottom: 10px;}
     .mobileInnerMenu .innerMobileMenuText a{font-size: 16px;text-transform: capitalize;color:rgba(255, 255, 255, 0.8);text-decoration: underline;}
-    .mobileInnerMenu .mobileNewsroom {text-align: left;margin-top: 90px;}
-    .mobileInnerMenu .mobileNewsroom a{color: rgba(255,255,255,.5);}
+    .mobileInnerMenu .mobileNewsroom {text-align: left;margin-top: 50px;}
+    .mobileInnerMenu .mobileNewsroom a{color: rgba(255,255,255,.5);font-size: 24px;}
     .excellenceCardText h4{opacity: 1;height: auto;}
     .excellenceSliderInner:hover{transform: scale(1);position: relative;z-index: 3;}
     .lifeSection{padding: 0 0 100px;}
@@ -2450,7 +2450,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .mobileJourneyImgSlider .slick-dots li.slick-active button:before {opacity: 1;color: #fff;background:none;-webkit-background-clip: unset;-webkit-text-fill-color: unset;}
     /* partnership */
     .partnershipBannerText{transform: unset;top: unset;bottom: 0;}
-    .partnershipBannerText h1{width: auto;}
+    .partnershipBannerText h1{width: auto;font-size: 30px;}
     .technologySection{padding-top: 80px;}
     .technologySubHeading{display: block;padding: 0;}
     .technologySubHeading p{width: auto;padding-top: 15px;}
@@ -2522,7 +2522,6 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .outcomeCard h3{padding: 0;}
     .outcomeCard > div{display: flex;align-items: center;padding-bottom: 10px;}
     .outcomeCard > div h2{padding-right: 15px;}
-    .caseBannerImg{display: none;}
     .whitepaperTopicImg .caseBannerImg{display: block;}
     .caseBannerImgMobile{display: block;}
     .caseInner .contactBannerOverlayThree{transform: none;background: linear-gradient(270deg, #0B0B0B -18.02%, rgba(11, 11, 11, 0) 80.71%);}
@@ -2553,7 +2552,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     ul.filter li:last-child{margin-bottom: 0;}
     /* whitepaper */
     .main-div{width: 100%;flex-flow: wrap;}
-    .part1{width: 100%;border: 0;padding: 0 0 20px;border-bottom: 0.5px dashed rgba(197, 195, 195, 0.3);}
+    .part1{width: 100%;border: 0;padding: 0px;border-bottom: 0.5px dashed rgba(197, 195, 195, 0.3);}
     .part2{width: 50%;padding: 0;padding-top: 20px;}
     .interestedWrapper .sliderArrow{display: none;}
     .interestedWrapper{padding: 0 15px;}
@@ -2825,7 +2824,10 @@ form.submitting .wpcf7-spinner {visibility: visible;}
 }
 @media all and (max-width: 770px) {}
 @media all and (max-width: 768px) {}
-@media all and (max-width: 760px) {}
+@media all and (max-width: 760px) {
+    .post-event-text .parts-text{display: block;padding-left:0px}
+	.post-event-text .parts-text a{margin-left: 0px;margin-top: 10px;}
+}
 @media all and (max-width: 640px) {
     .flipInnerHolder{width: 100%;}
     .partnersHolder{justify-content: space-between;}
