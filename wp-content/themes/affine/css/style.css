@@ -1195,7 +1195,9 @@ ul.filter li.active{background: linear-gradient(152.97deg, rgba(255, 255, 255, 0
 .form-details label {font-size: 14px;opacity: 0.5;position: absolute;margin: 0;top: -20px;left: 0px;}
 .form-details input {background-color: transparent;border: 0;width: 100%;font-size: 16px;padding: 10px;}
 .form-details input::placeholder {color: #ffffff;}
+.phoneno {position: relative;border-radius: 5px;border: 1px solid #EAEAEA;width: 48%;}
 .event-name {position: relative;border-radius: 5px;border: 1px solid #EAEAEA;width: 48%;}
+.phoneno{position: relative;border-radius: 5px;border: 1px solid #EAEAEA;width: 48%;margin-top:52px}
 .event-email {position: relative;border-radius: 5px;border: 1px solid #EAEAEA;width: 48%;}
 .event-btn {margin-top: 40px;display: flex;}
 .event-btn .cta1{cursor: pointer;}
@@ -1983,6 +1985,8 @@ form.submitting .wpcf7-spinner {visibility: visible;}
 .thankyouModal .modalBodyInner{text-align: center;}
 .thankyouModal .modalBodyInner p{margin: 20px 0 30px;}
 .caseStudiesFormDiv .wpcf7 form.sent .wpcf7-response-output{display: none;}
+.eventInfo{display: flex;align-items: center;justify-content: space-between;}
+.eventInfo .headingEvent{margin-left: 20px;}
 /*********************************************Media Queries************************************************/
 @media all and (max-width: 1600px) {
     .wrapper{padding: 0 80px;}
@@ -2606,7 +2610,8 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .bookyourslot{width: auto;margin: 0 15px 50px;padding: 20px 0;}
     .form-details{display: block;}
     .event-name{width: 100%;}
-    .event-email{width: 100%;margin-top: 40px;}
+    .event-email{width: 100%;margin-top:48px}
+	.phoneno{width:100%;margin-top:48px}
     .slot-details-p1{display: block;padding: 20px;width: auto;}
     .slot-details-p1 h2{width: 100%;text-align: center;padding: 0;padding-bottom: 10px;}
     .details-date{width: 100%;justify-content: center;padding-top: 10px;border-top: 0.5px dashed #C5C3C3;}
