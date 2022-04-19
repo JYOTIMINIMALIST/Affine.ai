@@ -33,7 +33,7 @@ if ($("#ae-banner").length) {
     container: document.getElementById('ae-banner'), // Required
     path: site_url + '/wp-content/themes/affine/js/json/ae-banner.json', // Required
     renderer: 'svg', // Required
-    loop: false, // Optional
+    loop: true, // Optional
     autoplay: true, // Optional
     name: "ae-banner", // Name for future reference. Optional.
   });
@@ -43,7 +43,7 @@ if ($("#ae-banner-mob").length) {
     container: document.getElementById('ae-banner-mob'), // Required
     path: site_url + '/wp-content/themes/affine/js/json/ae-banner-mob.json', // Required
     renderer: 'svg', // Required
-    loop: false, // Optional
+    loop: true, // Optional
     autoplay: true, // Optional
     name: "ae-banner-mob", // Name for future reference. Optional.
   });
@@ -140,6 +140,14 @@ $(document).ready(function () {
     ]
   });
 
+  $('.authorSlider').slick({
+    dots: true,
+    infinite: false,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+  
   $('.innovationSlider').slick({
     dots: false,
     infinite: true,
@@ -446,7 +454,7 @@ $(document).ready(function () {
     asNavFor: '.dataSlider-nav',
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 1080,
         settings: {
           dots: true,                  
         }
@@ -456,6 +464,7 @@ $(document).ready(function () {
   $('.dataSlider-nav').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
+    infinite: false,
     asNavFor: '.dataSlider-for',
     dots: false,
     arrows: true,
@@ -471,26 +480,51 @@ $(document).ready(function () {
     var filter = $(this).data('filter');
     $(".dataSlider-nav").slick('slickUnfilter');
     $(".dataSlider-for").slick('slickUnfilter');
-    
     if(filter == 'week'){
       $(".dataSlider-nav").slick('slickFilter','.week');
       $(".dataSlider-for").slick('slickFilter','.week');
+    var indx = 1;
+        $.each($(".dataSlider-nav .dataSliderInnerNav").not(".slick-current"), function (t, v) {
+            $(v).attr("data-slick-index", indx);
+            indx++;
+        });
     }
     else if(filter == 'month'){
       $(".dataSlider-nav").slick('slickFilter','.month');
       $(".dataSlider-for").slick('slickFilter','.month');
+      var indx = 1;
+        $.each($(".dataSlider-nav .dataSliderInnerNav").not(".slick-current"), function (t, v) {
+            $(v).attr("data-slick-index", indx);
+            indx++;
+        });
     }
     else if(filter == 'year'){
       $(".dataSlider-nav").slick('slickFilter','.year');
       $(".dataSlider-for").slick('slickFilter','.year');
+      var indx = 1;
+        $.each($(".dataSlider-nav .dataSliderInnerNav").not(".slick-current"), function (t, v) {
+            $(v).attr("data-slick-index", indx);
+            indx++;
+        });
     }
-    else if(filter == 'all'){      
-      $(".dataSlider-nav").slick('slickUnfilter');
-      $(".dataSlider-for").slick('slickUnfilter');
+    else if(filter == 'all'){
+      $(".dataSlider-nav").slick('slickUnfilter','.all');
+      $(".dataSlider-for").slick('slickUnfilter','.all');
+      var indx = 1;
+        $.each($(".dataSlider-nav .dataSliderInnerNav").not(".slick-current"), function (t, v) {
+            $(v).attr("data-slick-index", indx);
+            indx++;
+        });
     }
-    
   })
-
+  $('li.week').click(function(){$('.dataSliderInnerFor').css('z-index','998').css('opacity','0');});
+  $('li.week').click(function(){$('.dataSlider-for .dataSliderInnerFor:nth-child(1)').css('z-index','999').css('opacity','1');});
+  $('li.month').click(function(){$('.dataSliderInnerFor').css('z-index','998').css('opacity','0');});
+  $('li.month').click(function(){$('.dataSlider-for .dataSliderInnerFor:nth-child(1)').css('z-index','999').css('opacity','1');});
+  $('li.year').click(function(){$('.dataSliderInnerFor').css('z-index','998').css('opacity','0');});
+  $('li.year').click(function(){$('.dataSlider-for .dataSliderInnerFor:nth-child(1)').css('z-index','999').css('opacity','1');});
+  $('li.all').click(function(){$('.dataSliderInnerFor').css('z-index','998').css('opacity','0');});
+  $('li.all').click(function(){$('.dataSlider-for .dataSliderInnerFor:nth-child(1)').css('z-index','999').css('opacity','1');});
 
   $('.careerjobSlider').slick({
     dots: false,
@@ -513,16 +547,34 @@ $(document).ready(function () {
       dots: true,
       infinite: false,
       arrows:false,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
     });
 
     $('.serviceAreasHolder').slick({
       dots: true,
       infinite: false,
       arrows:false,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
     });
 
   }
@@ -546,11 +598,21 @@ $(document).ready(function () {
   });
 
   $('.coeGamingSlider').slick({
-    dots: false,
-    infinite: true,
+    dots: true,
+    infinite: false,
     arrows:false,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  $('.coeCloudSlider').slick({
+    dots: true,
+    infinite: false,
+    arrows:false,
+    autoplay: true,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
@@ -740,6 +802,14 @@ $( ".mobileExcellenceFilter" ).click(function() {
   $( ".filterHolderInner" ).toggleClass('active');
 });
 
+$("ul.netflixFilter li a").click(function (e) {    
+  var buttonTextWithSpaces = $(this).html();
+  var buttonText = buttonTextWithSpaces.replace(/^\s+|\s+$/g, '')
+  // console.log(buttonText)
+  $('.showFilterMob').html(buttonText);
+  $( "ul.netflixFilter" ).removeClass('active');  
+});
+
 $( ".addressDiv" ).click(function() {
   $(".active").removeClass("active")
   $(this).toggleClass('active');
@@ -750,109 +820,93 @@ $( ".subAddress li" ).click(function() {
   $(this).toggleClass('subActive');
 });
 
-$( ".indiaAddress" ).click(function() {
-  $(".indiaMap").addClass("activateMap")
-  $(".usaMap").removeClass("activateMap")
-  $(".singaporeMap").removeClass("activateMap")
-});
 
-$( ".usaAddress" ).click(function() {
-  $(".indiaMap").removeClass("activateMap")
-  $(".usaMap").addClass("activateMap")
-  $(".singaporeMap").removeClass("activateMap")
-});
+// // india
+// $( ".openHyderabad" ).click(function() {
+//   $(".popUpHyderabad").addClass("activateMapPopup")
+//   $(".popUpBengaluru").removeClass("activateMapPopup")
+//   $(".popUpAhmedabad").removeClass("activateMapPopup")
+// });
 
-$( ".singaporeAddress" ).click(function() {
-  $(".indiaMap").removeClass("activateMap")
-  $(".usaMap").removeClass("activateMap")
-  $(".singaporeMap").addClass("activateMap")
-});
-// india
-$( ".openHyderabad" ).click(function() {
-  $(".popUpHyderabad").addClass("activateMapPopup")
-  $(".popUpBengaluru").removeClass("activateMapPopup")
-  $(".popUpAhmedabad").removeClass("activateMapPopup")
-});
+// $( ".openBengaluru" ).click(function() {
+//   $(".popUpHyderabad").removeClass("activateMapPopup")
+//   $(".popUpBengaluru").addClass("activateMapPopup")
+//   $(".popUpAhmedabad").removeClass("activateMapPopup")
+// });
+// $( ".openAhmedabad" ).click(function() {
+//   $(".popUpHyderabad").removeClass("activateMapPopup")
+//   $(".popUpAhmedabad").addClass("activateMapPopup")
+//   $(".popUpBengaluru").removeClass("activateMapPopup")
+// });
+// // usa
+// $( ".openNewYork" ).click(function() {
+//   $(".popUpNewYork").addClass("activateMapPopup")
+//   $(".popUpGeorgia").removeClass("activateMapPopup")
+//   $(".popUpBellevue").removeClass("activateMapPopup")
+//   $(".popUpSanMateo").removeClass("activateMapPopup")
+//   $(".popUpOregon").removeClass("activateMapPopup")
+//   $(".popUpLosAngeles").removeClass("activateMapPopup")
+//   $(".popUpSantaMonica").removeClass("activateMapPopup")
+// });
+// $( ".openGeorgia" ).click(function() {
+//   $(".popUpNewYork").removeClass("activateMapPopup")
+//   $(".popUpGeorgia").addClass("activateMapPopup")
+//   $(".popUpBellevue").removeClass("activateMapPopup")
+//   $(".popUpSanMateo").removeClass("activateMapPopup")
+//   $(".popUpOregon").removeClass("activateMapPopup")
+//   $(".popUpLosAngeles").removeClass("activateMapPopup")
+//   $(".popUpSantaMonica").removeClass("activateMapPopup")
+// });
+// $( ".openBellevue" ).click(function() {
+//   $(".popUpNewYork").removeClass("activateMapPopup")
+//   $(".popUpGeorgia").removeClass("activateMapPopup")
+//   $(".popUpBellevue").addClass("activateMapPopup")
+//   $(".popUpSanMateo").removeClass("activateMapPopup")
+//   $(".popUpOregon").removeClass("activateMapPopup")
+//   $(".popUpLosAngeles").removeClass("activateMapPopup")
+//   $(".popUpSantaMonica").removeClass("activateMapPopup")
+// });
+// $( ".openSanMateo" ).click(function() {
+//   $(".popUpNewYork").removeClass("activateMapPopup")
+//   $(".popUpGeorgia").removeClass("activateMapPopup")
+//   $(".popUpBellevue").removeClass("activateMapPopup")
+//   $(".popUpSanMateo").addClass("activateMapPopup")
+//   $(".popUpOregon").removeClass("activateMapPopup")
+//   $(".popUpLosAngeles").removeClass("activateMapPopup")
+//   $(".popUpSantaMonica").removeClass("activateMapPopup")
+// });
+// $( ".openOregon" ).click(function() {
+//   $(".popUpNewYork").removeClass("activateMapPopup")
+//   $(".popUpGeorgia").removeClass("activateMapPopup")
+//   $(".popUpBellevue").removeClass("activateMapPopup")
+//   $(".popUpSanMateo").removeClass("activateMapPopup")
+//   $(".popUpOregon").addClass("activateMapPopup")
+//   $(".popUpLosAngeles").removeClass("activateMapPopup")
+//   $(".popUpSantaMonica").removeClass("activateMapPopup")
+// });
+// $( ".openLosAngeles" ).click(function() {
+//   $(".popUpNewYork").removeClass("activateMapPopup")
+//   $(".popUpGeorgia").removeClass("activateMapPopup")
+//   $(".popUpBellevue").removeClass("activateMapPopup")
+//   $(".popUpSanMateo").removeClass("activateMapPopup")
+//   $(".popUpOregon").removeClass("activateMapPopup")
+//   $(".popUpLosAngeles").addClass("activateMapPopup")
+//   $(".popUpSantaMonica").removeClass("activateMapPopup")
+// });
+// $( ".openSantaMonica" ).click(function() {
+//   $(".popUpNewYork").removeClass("activateMapPopup")
+//   $(".popUpGeorgia").removeClass("activateMapPopup")
+//   $(".popUpBellevue").removeClass("activateMapPopup")
+//   $(".popUpSanMateo").removeClass("activateMapPopup")
+//   $(".popUpOregon").removeClass("activateMapPopup")
+//   $(".popUpLosAngeles").removeClass("activateMapPopup")
+//   $(".popUpSantaMonica").addClass("activateMapPopup")
+// });
 
-$( ".openBengaluru" ).click(function() {
-  $(".popUpHyderabad").removeClass("activateMapPopup")
-  $(".popUpBengaluru").addClass("activateMapPopup")
-  $(".popUpAhmedabad").removeClass("activateMapPopup")
-});
-$( ".openAhmedabad" ).click(function() {
-  $(".popUpHyderabad").removeClass("activateMapPopup")
-  $(".popUpAhmedabad").addClass("activateMapPopup")
-  $(".popUpBengaluru").removeClass("activateMapPopup")
-});
-// usa
-$( ".openNewYork" ).click(function() {
-  $(".popUpNewYork").addClass("activateMapPopup")
-  $(".popUpGeorgia").removeClass("activateMapPopup")
-  $(".popUpBellevue").removeClass("activateMapPopup")
-  $(".popUpSanMateo").removeClass("activateMapPopup")
-  $(".popUpOregon").removeClass("activateMapPopup")
-  $(".popUpLosAngeles").removeClass("activateMapPopup")
-  $(".popUpSantaMonica").removeClass("activateMapPopup")
-});
-$( ".openGeorgia" ).click(function() {
-  $(".popUpNewYork").removeClass("activateMapPopup")
-  $(".popUpGeorgia").addClass("activateMapPopup")
-  $(".popUpBellevue").removeClass("activateMapPopup")
-  $(".popUpSanMateo").removeClass("activateMapPopup")
-  $(".popUpOregon").removeClass("activateMapPopup")
-  $(".popUpLosAngeles").removeClass("activateMapPopup")
-  $(".popUpSantaMonica").removeClass("activateMapPopup")
-});
-$( ".openBellevue" ).click(function() {
-  $(".popUpNewYork").removeClass("activateMapPopup")
-  $(".popUpGeorgia").removeClass("activateMapPopup")
-  $(".popUpBellevue").addClass("activateMapPopup")
-  $(".popUpSanMateo").removeClass("activateMapPopup")
-  $(".popUpOregon").removeClass("activateMapPopup")
-  $(".popUpLosAngeles").removeClass("activateMapPopup")
-  $(".popUpSantaMonica").removeClass("activateMapPopup")
-});
-$( ".openSanMateo" ).click(function() {
-  $(".popUpNewYork").removeClass("activateMapPopup")
-  $(".popUpGeorgia").removeClass("activateMapPopup")
-  $(".popUpBellevue").removeClass("activateMapPopup")
-  $(".popUpSanMateo").addClass("activateMapPopup")
-  $(".popUpOregon").removeClass("activateMapPopup")
-  $(".popUpLosAngeles").removeClass("activateMapPopup")
-  $(".popUpSantaMonica").removeClass("activateMapPopup")
-});
-$( ".openOregon" ).click(function() {
-  $(".popUpNewYork").removeClass("activateMapPopup")
-  $(".popUpGeorgia").removeClass("activateMapPopup")
-  $(".popUpBellevue").removeClass("activateMapPopup")
-  $(".popUpSanMateo").removeClass("activateMapPopup")
-  $(".popUpOregon").addClass("activateMapPopup")
-  $(".popUpLosAngeles").removeClass("activateMapPopup")
-  $(".popUpSantaMonica").removeClass("activateMapPopup")
-});
-$( ".openLosAngeles" ).click(function() {
-  $(".popUpNewYork").removeClass("activateMapPopup")
-  $(".popUpGeorgia").removeClass("activateMapPopup")
-  $(".popUpBellevue").removeClass("activateMapPopup")
-  $(".popUpSanMateo").removeClass("activateMapPopup")
-  $(".popUpOregon").removeClass("activateMapPopup")
-  $(".popUpLosAngeles").addClass("activateMapPopup")
-  $(".popUpSantaMonica").removeClass("activateMapPopup")
-});
-$( ".openSantaMonica" ).click(function() {
-  $(".popUpNewYork").removeClass("activateMapPopup")
-  $(".popUpGeorgia").removeClass("activateMapPopup")
-  $(".popUpBellevue").removeClass("activateMapPopup")
-  $(".popUpSanMateo").removeClass("activateMapPopup")
-  $(".popUpOregon").removeClass("activateMapPopup")
-  $(".popUpLosAngeles").removeClass("activateMapPopup")
-  $(".popUpSantaMonica").addClass("activateMapPopup")
-});
-
-// singapore
-$( ".openSingapore" ).click(function() {
-  $(".popUpSingapore").addClass("activateMapPopup")
-});
+// // singapore
+// $( ".openSingapore" ).click(function() {
+//   $(".popUpSingapore").addClass("activateMapPopup")
+// });
 
 
 if (screen && screen.width < 900) {
@@ -1003,6 +1057,7 @@ if (screen && screen.width < 900) {
     
   })
 }
+
 
 $('.searchDiv input').keyup(function () {
   $( ".searchResultDiv" ).addClass('active');
