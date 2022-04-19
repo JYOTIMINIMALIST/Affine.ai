@@ -1189,8 +1189,8 @@ ul.filter li.active{background: linear-gradient(152.97deg, rgba(255, 255, 255, 0
 .post-event-text .parts-text {display: flex;align-items: center;}
 .post-event-text .parts-text a {margin-left: 45px;}
 .slotdetails h1 {position: relative;margin-bottom: 62px;}
-.slotdetails h1::after {content: " ";position: absolute;width: 55px;height: 2px;left: 0px;top: 50px;background: linear-gradient(101.24deg, #F05B5B -11.97%, #EC1A3E 43.96%, #7C51A0 123.01%, #6DCCE3 200.17%, #6DCCE3 226.22%);border-radius: 2px;}
-.bookyourslot {border: 0.5px solid rgb(4 167 201 / 35%);box-shadow: 0px 0px 10px 0px rgb(4 167 201 / 35%);background: linear-gradient(141.43deg, rgba(18, 31, 34, 0.45) 17.49%, rgba(255, 255, 255, 0) 89.31%, rgba(18, 31, 34, 0) 89.31%);backdrop-filter: blur(29.8667px);margin: auto;width: 64%;padding: 70px 0px;}
+.slotdetails h1::after {content: " ";position: absolute;width: 55px;height: 2px;left: 0px;top: 70px;background: linear-gradient(101.24deg, #F05B5B -11.97%, #EC1A3E 43.96%, #7C51A0 123.01%, #6DCCE3 200.17%, #6DCCE3 226.22%);border-radius: 2px;}
+.bookyourslot {border: 0.5px solid rgb(4 167 201 / 35%);box-shadow: 0px 0px 10px 0px rgb(4 167 201 / 35%);background: linear-gradient(141.43deg, rgba(18, 31, 34, 0.45) 17.49%, rgba(255, 255, 255, 0) 89.31%, rgba(18, 31, 34, 0) 89.31%);backdrop-filter: blur(29.8667px);margin: auto;width: 64%;padding: 70px 0px;margin-bottom: 50px;}
 .form-details {display: flex;width: 100%;justify-content: space-between;}
 .form-details label {font-size: 14px;opacity: 0.5;position: absolute;margin: 0;top: -20px;left: 0px;}
 .form-details input {background-color: transparent;border: 0;width: 100%;font-size: 16px;padding: 10px;}
@@ -2054,6 +2054,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .chooseWhitepaperSection{padding-top: 0;}
     .webinarYear{top: 15px;}
     .exploreContent h3{height: 60px;}
+    .slotdetails h1::after {top: 50px;}
 }
 @media all and (max-width: 1400px) {
     .wrapper{padding: 0 50px;}
@@ -2528,7 +2529,6 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     /* case Studies */
     .caseStudiesSlider .slick-dots{bottom: unset;top: 50px;left: 15px;right: unset;}
     .caseStudiesBannerText p{display: none;}
-    .caseStudiesBannerText h1{margin-bottom: 20px;}
     .thoughtBoxWrapper .sliderArrow{display: none;}
     .thoughtBoxInnerSlider{margin-right: 15px;}
     .recommendedSection .wrapper{padding-right: 15px;}
