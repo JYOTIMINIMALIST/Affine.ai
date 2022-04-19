@@ -6,18 +6,10 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-<<<<<<< HEAD
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /Affine_Latest_project/index.php [L]
-=======
-RewriteBase /projects/Affine.ai/
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /projects/Affine.ai/index.php [L]
->>>>>>> f804dd06394d913d2d228c6f7785e98d394af4ce
 </IfModule>
 
 # END WordPress
