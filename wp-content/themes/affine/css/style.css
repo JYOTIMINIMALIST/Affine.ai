@@ -2600,7 +2600,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .unstoppableDetails{padding-bottom: 0;}
     /* post Event */
     .postEventBanner .contactBannerOverlayTwo{height: 70%;}
-    .postEventBanner .contactBannerOverlayFive{height: 70%;}
+    .postEventBanner .contactBannerOverlayFive{height: 100%;}
     .whitepaperBannerText .post-event-text{width: 100%;}
     .whitepaperBannerText .post-event-text .part1{border-bottom:0;}
     .postEventDetails{padding-top: 0;}

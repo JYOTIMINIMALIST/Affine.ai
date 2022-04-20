@@ -1,42 +1,55 @@
 <?php get_header(); ?>
 
 <section class="partnershipBanner postEventBanner">
-    <div class="partnershipBgImg">
-        <?php $banner_image = get_field('banner_image');
-        if (!empty($banner_image)) : ?>
-            <img src="<?php echo esc_url($banner_image['url']); ?>" loading="lazy" alt="<?php echo esc_attr($banner_image['alt']); ?>" class="caseBannerImg" />
-        <?php endif; ?>
-        <div class="contactBannerOverlayTwo"></div>
-        <div class="contactBannerOverlayThree"></div>
-        <div class="contactBannerOverlayFour"></div>
-        <div class="contactBannerOverlayFive"></div>
-        <div class="partnershipBannerText newsroomBannerText caseStudiesBannerText whitepaperBannerText">
-            <div class="wrapper">
-                <h1 class="font80 caslonGraphiqueEF"><?php the_title(); ?></h1>
-                <p class="font24 colorG"><?php echo get_field('banner_text'); ?></p>
-                <div class="main-div post-event-text">
-                    <div class="div-parts part1 cal">
-                        <div class="parts-text">
-                            <div class="eventInfo">
-                                <div>
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/banner-img1.png" alt="">
-                                </div>
-                                <div class="headingEvent">
-                                    <h3 class="font24 commonsSemiBold colorG"><?php echo get_field('event_date'); ?></h3>
-                                    <h3 class="font24 commonsSemiBold colorG"><?php echo get_field('event_time'); ?></h3>
+    <div class="caseStudiesSlider">
+        <?php if (have_rows('banner_section')) : ?>
+            <?php while (have_rows('banner_section')) : the_row(); ?>
+                <div class="caseStudiesInnerSlider">
+                    <div class="partnershipBgImg">
+                        <?php $bannerimage = get_sub_field('banner_image');
+                        if (!empty($bannerimage)) : ?>
+                            <img src="<?php echo esc_url($bannerimage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($bannerimage['alt']); ?>" class="desktopBanner" />
+                        <?php endif; ?>
+                        <?php $mobile_banner_image = get_sub_field('mobile_banner_image');
+                        if (!empty($mobile_banner_image)) : ?>
+                            <img src="<?php echo esc_url($mobile_banner_image['url']); ?>" loading="lazy" alt="<?php echo esc_attr($mobile_banner_image['alt']); ?>" class="mobileBanner" />
+                        <?php endif; ?>
+                        <div class="contactBannerOverlayTwo"></div>
+                        <div class="contactBannerOverlayThree"></div>
+                        <div class="contactBannerOverlayFour"></div>
+                        <div class="contactBannerOverlayFive"></div>
+                        <div class="partnershipBannerText newsroomBannerText caseStudiesBannerText">
+                            <div class="wrapper">
+                                <h1 class="font80 caslonGraphiqueEF"><?php the_title(); ?></h1>
+                                <p class="font24 colorG"><?php echo get_sub_field('banner_text'); ?></p>
+                                <div class="main-div post-event-text">
+                                    <div class="div-parts part1 cal">
+                                        <div class="parts-text">
+                                            <div class="eventInfo">
+                                                <div>
+                                                    <img src="<?php bloginfo('template_directory'); ?>/images/banner-img1.png" alt="">
+                                                </div>
+                                                <div class="headingEvent">
+                                                    <h3 class="font24 commonsSemiBold colorG"><?php echo get_sub_field('event_date'); ?></h3>
+                                                    <h3 class="font24 commonsSemiBold colorG"><?php echo get_sub_field('event_time'); ?></h3>
+                                                </div>
+                                            </div>
+
+                                            <?php $ctaText = get_sub_field('upcoming_cta_text'); ?>
+                                            <?php if (!empty($ctaText)) { ?>
+                                                <a href="#bookyourslot" class="cta1 regNow"><?php echo $ctaText ?></a>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <?php $ctaText = get_field('upcoming_cta_text'); ?>
-                            <?php if (!empty($ctaText)) { ?>
-                                <a href="#bookyourslot" class="cta1 regNow"><?php echo $ctaText ?></a>
-                            <?php } ?>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </div>
+    
 </section>
 
 <section class="details eventDetails">

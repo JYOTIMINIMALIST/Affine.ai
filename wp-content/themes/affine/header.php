@@ -92,7 +92,7 @@
                     <div class="menuHolder">
                         <?php if (have_rows('we_are_hiring', 'option')) : ?>
                             <?php while (have_rows('we_are_hiring', 'option')) : the_row(); ?>
-                                <a href="<?php echo get_sub_field('hiring_cta_link', 'option'); ?>" class="contactUsCta sparkleBtn"><?php echo get_sub_field('hiring_cta_text', 'option'); ?></a>
+                                <a href="<?php echo get_sub_field('hiring_cta_link', 'option'); ?>" target="_blank" class="contactUsCta sparkleBtn"><?php echo get_sub_field('hiring_cta_text', 'option'); ?></a>
                             <?php endwhile; ?>
                         <?php endif; ?>
                         <div class="hamburgerHolder">
