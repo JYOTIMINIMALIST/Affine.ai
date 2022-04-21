@@ -966,7 +966,7 @@ ul#filterOptions li a img{margin-right: 5px;}
 ul#filterOptions li a:hover{background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.4) 23.96%, rgba(255, 255, 255, 0) 100%);font-family: 'TT Commons DemiBold';}
 ul#filterOptions li.active a{background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.4) 23.96%, rgba(255, 255, 255, 0) 100%);font-family: 'TT Commons DemiBold';}
 /*- -*/  
-.choseTopicHolder{display: flex;margin: 0 -10px; flex-flow: wrap;margin-top: 60px;}
+.choseTopicHolder{display: flex;margin: 0 -10px; flex-flow: wrap;margin-top: 60px; justify-content: space-between;}
 .choseTopicContent{width: 32%;margin: 0 10px;position: relative;margin-bottom: 30px;overflow: hidden;}
 .choseTopicContent:nth-of-type(3n+3) {margin-right: 0px;}
 .choseTopicImg{position: relative;border-radius: 5px;}
@@ -980,8 +980,8 @@ ul#filterOptions li.active a{background: linear-gradient(152.97deg, rgba(255, 25
 
 /************************************************ WHITEPAPER **************************************************/
 .whitepaperBannerText .main-div{width: 55%;}
-.choseTopicWhitepaperContent{width: 32%;position: relative;margin-bottom: 60px;margin-right: 2%;}
-.choseTopicWhitepaperContent:nth-of-type(3n+3) {margin-right: 0px;}
+.choseTopicWhitepaperContent{width: 32%;position: relative;margin-bottom: 60px;/*margin-right: 2%;*/}
+/*.choseTopicWhitepaperContent:nth-of-type(3n+3) {margin-right: 0px;}*/
 .whitepaperTopicImg{position: relative;border-radius: 5px;margin-bottom: 25px;overflow: hidden;}
 .whitepaperTopicImg img{border-radius: 5px;transition: all .5s;}
 .whitepaperTopicImg::after{content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;border-radius: 5px;background: linear-gradient(0.24deg, #000000 4%, rgba(0, 0, 0, 0) 44.21%);opacity: 0.8;}
@@ -2053,7 +2053,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .serviceSliderWrapper{padding: 80px;}
     .chooseWhitepaperSection{padding-top: 0;}
     .webinarYear{top: 15px;}
-    .exploreContent h3{height: 60px;}
+    .exploreContent h3{height: 70px;}
     .slotdetails h1::after {top: 50px;}
 }
 @media all and (max-width: 1400px) {
@@ -2527,7 +2527,8 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .caseBannerImgMobile{display: block;}
     .caseInner .contactBannerOverlayThree{transform: none;background: linear-gradient(270deg, #0B0B0B -18.02%, rgba(11, 11, 11, 0) 80.71%);}
     /* case Studies */
-    .caseStudiesSlider .slick-dots{bottom: unset;top: 50px;left: 15px;right: unset;}
+    .caseStudiesSlider {margin-bottom: 50px !important;}
+    .caseStudiesSlider .slick-dots{bottom: unset;/*top: 50px;*/left: 15px;right: 0;}
     .caseStudiesBannerText p{display: none;}
     .thoughtBoxWrapper .sliderArrow{display: none;}
     .thoughtBoxInnerSlider{margin-right: 15px;}
@@ -2814,7 +2815,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .blogsArticleBanner .partnershipBannerText{position: unset;}
     .blogsAuthorBannerDiv{width: 100%;}
     .authorSlider{width: auto;}
-    .whitepaperBannerText .main-div{margin-bottom: 0;}
+    .whitepaperBannerText .main-div{margin-bottom: 15px;}
     .academiaBanner .scrollDown{bottom: -80px;}
     .whitepaperChallengesSection{padding-bottom: 0;}
     .manuExploreHolder{width: 100%;}
@@ -2875,6 +2876,8 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .media-cov{display: block;}
     .serviceAreasCard{margin: 0;}
     .interestedCard{padding:0px;}
+    /*case- study*/
+    .thankyouModal .modal-content{padding: 70px 25px; width: 90%;}
 }
 @media all and (max-width: 500px) {
     .caseInner .contactBannerOverlayTwo, .caseInner .contactBannerOverlayThree, .caseInner .contactBannerOverlayFour, .caseInner .contactBannerOverlayFive{height: 45%;}
