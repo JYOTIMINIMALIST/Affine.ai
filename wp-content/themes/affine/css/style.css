@@ -2099,6 +2099,9 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .authorImgListing{margin-left: 20px;}
     .webinarYear{top: 30px;}
 }
+@media (max-width: 1400px) and (min-width: 1350px) {
+    .webinarYear{top: 10px !important;}
+}
 @media all and (max-width: 1280px) {
     .contactUsInner .bannerText{width: 45%;}
     .businessesSection{margin-top: 0;padding-top: 50px;}
@@ -2530,6 +2533,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .caseStudiesSlider {margin-bottom: 50px !important;}
     .caseStudiesSlider .slick-dots{bottom: unset;/*top: 50px;*/left: 15px;right: 0;}
     .caseStudiesBannerText p{display: none;}
+    .caseInner{margin-bottom: -250px;}
     .thoughtBoxWrapper .sliderArrow{display: none;}
     .thoughtBoxInnerSlider{margin-right: 15px;}
     .recommendedSection .wrapper{padding-right: 15px;}
@@ -2557,9 +2561,9 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .part2{width: 50%;padding: 0;padding-top: 20px;}
     .interestedWrapper .sliderArrow{display: none;}
     .interestedWrapper{padding: 0 15px;}
-    .choseTopicWhitepaperContent {width: 48%;margin-right: 4%;}
-    .choseTopicWhitepaperContent:nth-of-type(3n+3) {margin-right: 4%;}
-    .choseTopicWhitepaperContent:nth-of-type(3n+2) {margin-right: 0%;}
+    .choseTopicWhitepaperContent {width: 48%;}
+    /*.choseTopicWhitepaperContent:nth-of-type(3n+3) {margin-right: 4%;}
+    .choseTopicWhitepaperContent:nth-of-type(3n+2) {margin-right: 0%;}*/
     .choseTopicWhitepaperContent h3{-webkit-line-clamp: 3; height: 70px;}
     /* newsroom */
     .box1{bottom: 0;background: none;backdrop-filter: unset;-webkit-backdrop-filter: unset;}

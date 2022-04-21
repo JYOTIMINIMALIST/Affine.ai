@@ -13,7 +13,7 @@ $post_id=get_the_ID();
             <div class="caseInner">
                 <?php $bannerdesktop = get_sub_field('modal_banner_image');
                     if( !empty( $bannerdesktop ) ): ?>
-                    <img src="<?php echo esc_url($bannerdesktop['url']); ?>" loading="lazy" alt="<?php echo esc_attr($bannerdesktop['alt']); ?>" class="caseBannerImg" />
+                    <img src="<?php echo esc_url($bannerdesktop['url']); ?>" loading="lazy" alt="<?php echo esc_attr($bannerdesktop['alt']); ?>" class="desktopBanner" />
                 <?php endif; ?>
                 <?php $bannermobile = get_sub_field('modal_banner_image_mobile');
                     if( !empty( $bannermobile ) ): ?>
