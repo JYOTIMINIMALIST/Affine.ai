@@ -9,7 +9,7 @@
         ?>
             <div class="caseStudiesInnerSlider">
                 <div class="partnershipBgImg">
-                    <img src="<?php echo get_field('banner_image'); ?>" alt="">
+                    <img src="<?php echo get_field('banner_image'); ?>" alt="" class="blogarticlesbg">
                     <div class="contactBannerOverlayTwo"></div>
                     <div class="contactBannerOverlayThree"></div>
                     <div class="contactBannerOverlayFour"></div>
