@@ -1,2 +1,6 @@
 .htaccess
+<<<<<<< HEAD
 wp-config.php
+=======
+.wp-config
+>>>>>>> 430cdc7826b10db55fdec4b68e1a281964d699ae
