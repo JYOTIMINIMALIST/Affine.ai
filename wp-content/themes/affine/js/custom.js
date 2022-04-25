@@ -134,7 +134,9 @@ $(document).ready(function () {
           slidesToShow: 3.25,
           slidesToScroll: 1,
           vertical: false,
-          arrows: false,
+          arrows: true,
+          prevArrow: $(".homeSliderBack"),
+          nextArrow: $(".homeSliderForward"),
         }
       }
     ]

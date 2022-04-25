@@ -423,6 +423,20 @@ input:checked + .slider:before{transform: translateX(30px); background: linear-g
 .feedsHolder::-webkit-scrollbar{width: 5px;background-color: #D8D8D8;}
 .feedsHolder::-webkit-scrollbar-thumb{border-radius: 10px;background: linear-gradient(101.24deg, #F05B5B -11.97%, #EC1A3E 43.96%, #7C51A0 123.01%, #6DCCE3 200.17%, #6DCCE3 226.22%);;}
 
+
+/*slider new*/
+/*.homeSliderNavHolder{position: relative;}*/
+.homeSliderNavHolder .sliderArrow button{outline: none;background: transparent;position: absolute;top: 50%;transform: translateY(-50%);cursor: pointer;}
+.homeSliderNavHolder .sliderArrow .homeSliderBack{left: 0px;}
+.homeSliderNavHolder .sliderArrow .homeSliderForward{right: 0px;}
+.homeSliderNavHolder .slick-arrow.slick-disabled{opacity: 0.4;cursor: default;}
+.homeSlider-nav{overflow: hidden;}
+.homeSlider-nav .homeSliderNavInner.slick-slide.slick-active{opacity: 1;}
+.homeSlider-nav .homeSliderNavInner.slick-slide{opacity: .5;}
+.homeSlider-nav .homeSliderNavInner{position: relative;border-radius: 5px;}
+.homeSliderNavInner::before{content: "";position: absolute;top: 0;right: 0;bottom: 0;left: 0;z-index: -1;margin: -1px;border-radius: inherit;background: linear-gradient(101.24deg, #F05B5B 29.46%, #EC1A3E 36.25%, #7C51A0 72.9%, #7398C7 92.29%, #6DCCE3 146.82%, #6DCCE3 226.22%);transition: all .5s;opacity: 0;}
+
+
 .lifeSection{padding: 0 0 100px;}
 .lifeHolder{padding-left: 100px;}
 .lifeHolder h2{margin-bottom: 15px;text-transform: capitalize;}
@@ -2223,6 +2237,10 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .webinarYear{top: 35px;}
     .gamingImgExcellence{display: none;}
     .visionGamingBg{display: none;}
+}
+
+@media all and (min-width: 900px) {
+    .navSliderArrowNew{display: none;}
 }
 @media all and (max-width: 900px) {
     body{margin-top: 90px;}
