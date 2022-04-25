@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 7aa5189c387caac5f67e398564921c084c52b50b
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
@@ -12,13 +8,7 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-<<<<<<< HEAD
 RewriteRule . /Affine_Latest_project/index.php [L]
 </IfModule>
 
 # END WordPress
-=======
-RewriteRule . /affine.ai/index.php [L]
-</IfModule>
-# END WordPress
->>>>>>> 7aa5189c387caac5f67e398564921c084c52b50b

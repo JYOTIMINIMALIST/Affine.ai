@@ -65,8 +65,11 @@
         <img src="<?php bloginfo('template_directory'); ?>/images/down-arrow.svg" alt="">
     </a>
     <!-- Request for webinar Modal-->
-    <div class="modal fade excellenceModal contactUsModal" id="proposal" tabindex="-1" role="dialog" aria-labelledby="proposalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal fade excellenceModal contactUsModal" id="proposal" tabindex="-1" role="dialog"
+        aria-labelledby="proposalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -90,6 +93,35 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <!-- <div class="modal fade excellenceModal contactUsModal" id="proposal" tabindex="-1" role="dialog" aria-labelledby="proposalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="<?php bloginfo('template_directory');?>/images/close-icon.png" alt="">
+                    </button>
+                </div>
+                <?php if( have_rows('banner_section') ): ?>
+                    <?php while( have_rows('banner_section') ): the_row();?>
+                        <div class="modal-body">
+                            <div class="modalBodyInner">
+                                <div class="flipModalHeader">
+                                    <div class="formHeading">
+                                        <h3 class="font48 commonsMedium"><?php the_sub_field('form_heading'); ?></h3>
+                                    </div>
+                                </div>
+                                <?php the_sub_field('form_shortcode'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+    	        <?php endif; ?>
+            </div>
+        </div>
+    </div> -->
 </section>
 
 <section class="chooseTopicSection worldVideoSection" id="chooseTopicSection">
