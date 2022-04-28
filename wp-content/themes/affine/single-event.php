@@ -18,7 +18,7 @@
                         <div class="contactBannerOverlayThree"></div>
                         <div class="contactBannerOverlayFour"></div>
                         <div class="contactBannerOverlayFive"></div>
-                        <div class="partnershipBannerText newsroomBannerText caseStudiesBannerText single-event">
+                        <div class="partnershipBannerText newsroomBannerText caseStudiesBannerText">
                             <div class="wrapper">
                                 <h1 class="font80 caslonGraphiqueEF"><?php the_title(); ?></h1>
                                 <p class="font24 colorG"><?php echo get_sub_field('banner_text'); ?></p>

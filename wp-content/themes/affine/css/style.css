@@ -1999,7 +1999,6 @@ form.submitting .wpcf7-spinner {visibility: visible;}
 .thankyouModal .modalBodyInner{text-align: center;}
 .thankyouModal .modalBodyInner p{margin: 20px 0 30px;}
 .caseStudiesFormDiv .wpcf7 form.sent .wpcf7-response-output{display: none;}
-.single-event .main-div{width: 55%;}
 
 /*********************************************Media Queries************************************************/
 @media all and (max-width: 1600px) {
