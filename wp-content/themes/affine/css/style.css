@@ -2902,6 +2902,7 @@ form.submitting .wpcf7-spinner {visibility: visible;}
     .interestedCard{padding:0px;}
     /*case- study*/
     .thankyouModal .modal-content{padding: 70px 25px !important; width: 90% !important;}
+    .parts-text .eventHeading{width: 45%;}
 }
 @media all and (max-width: 500px) {
     .caseInner .contactBannerOverlayTwo, .caseInner .contactBannerOverlayThree, .caseInner .contactBannerOverlayFour, .caseInner .contactBannerOverlayFive{height: 45%;}

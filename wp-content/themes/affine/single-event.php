@@ -29,7 +29,7 @@
                                             <img src="<?php bloginfo('template_directory'); ?>/images/banner-img1.png" alt="">
                                         </div>
                                         <div class="parts-text">
-                                            <h3 class="font24 commonsSemiBold colorG"><?php echo get_sub_field('event_date'); ?><br><?php echo get_sub_field('event_time'); ?></h3>
+                                            <h3 class="font24 commonsSemiBold colorG eventHeading"><?php echo get_sub_field('event_date'); ?><br><?php echo get_sub_field('event_time'); ?></h3>
                                             <?php $ctaText = get_sub_field('upcoming_cta_text'); ?>
                                             <?php if (!empty($ctaText)) { ?>
                                                 <a href="#bookyourslot" class="cta1 regNow"><?php echo $ctaText ?></a>
