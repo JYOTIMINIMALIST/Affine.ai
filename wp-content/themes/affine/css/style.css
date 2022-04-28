@@ -916,7 +916,7 @@ input:checked + .slider:before{transform: translateX(30px); background: linear-g
 
 /************************************************ NEWSROOM **************************************************/
 .banner-text {letter-spacing: 0.2em;margin: 10px 0px;}
-.main-div {display: flex;align-items: center;border-top: 0.5px dashed rgba(197, 195, 195, 0.3);border-bottom: 0.5px dashed rgba(197, 195, 195, 0.3);width: 50%;margin-bottom: 24px;padding: 30px 0px;}
+.main-div {display: flex;align-items: center;border-top: 0.5px dashed rgba(197, 195, 195, 0.3);border-bottom: 0.5px dashed rgba(197, 195, 195, 0.3);width: 55%;margin-bottom: 24px;padding: 30px 0px;}
 .div-parts {display: flex;align-items: center;}
 .parts-text {padding-left: 16px;}
 .part1 {padding: 0px 20px 0px 0px;border-right: 0.5px dashed rgba(197, 195, 195, 0.3);}
