@@ -9,11 +9,11 @@ RewriteBase /projects/Affine.ai/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-<<<<<<< HEAD
+
 RewriteRule . /affine.ai/index.php [L]
-=======
-RewriteRule . /projects/Affine.ai/index.php [L]
->>>>>>> 7d9e98f9476da42a5a85fd02fc466d30741175d8
+
+
+
 </IfModule>
 
 # END WordPress
