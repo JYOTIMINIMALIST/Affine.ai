@@ -5,10 +5,15 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /projects/Affine.ai/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /Affine_Latest_project/index.php [L]
+<<<<<<< HEAD
+RewriteRule . /affine.ai/index.php [L]
+=======
+RewriteRule . /projects/Affine.ai/index.php [L]
+>>>>>>> 7d9e98f9476da42a5a85fd02fc466d30741175d8
 </IfModule>
 
 # END WordPress

@@ -23,15 +23,28 @@
                                 <h1 class="font80 caslonGraphiqueEF"><?php the_title(); ?></h1>
                                 <p class="font24 colorG"><?php echo get_sub_field('banner_text'); ?></p>
                                 <div class="main-div post-event-text">
+
                                     <div class="div-parts part1 cal">
+                                        <div>
+                                            <img src="<?php bloginfo('template_directory'); ?>/images/banner-img1.png" alt="">
+                                        </div>
+                                        <div class="parts-text">
+                                            <h3 class="font24 commonsSemiBold colorG eventHeading"><?php echo get_sub_field('event_date'); ?><br><?php echo get_sub_field('event_time'); ?></h3>
+                                            <?php $ctaText = get_sub_field('upcoming_cta_text'); ?>
+                                            <?php if (!empty($ctaText)) { ?>
+                                                <a href="#bookyourslot" class="cta1 regNow"><?php echo $ctaText ?></a>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="div-parts part1 cal">
                                         <div class="parts-text">
                                             <div class="eventInfo">
                                                 <div>
                                                     <img src="<?php bloginfo('template_directory'); ?>/images/banner-img1.png" alt="">
                                                 </div>
                                                 <div class="headingEvent">
-                                                    <h3 class="font24 commonsSemiBold colorG"><?php echo get_sub_field('event_date'); ?></h3>
-                                                    <h3 class="font24 commonsSemiBold colorG"><?php echo get_sub_field('event_time'); ?></h3>
+                                                    <h3 class="font24 commonsSemiBold colorG"><?php echo get_sub_field('event_date'); ?><br><?php echo get_sub_field('event_time'); ?></h3>
                                                 </div>
                                             </div>
 
@@ -40,7 +53,7 @@
                                                 <a href="#bookyourslot" class="cta1 regNow"><?php echo $ctaText ?></a>
                                             <?php } ?>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -49,7 +62,7 @@
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
-    
+
 </section>
 
 <section class="details eventDetails">

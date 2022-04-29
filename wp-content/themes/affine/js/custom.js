@@ -1183,7 +1183,10 @@ $( ".modalGameBtn" ).click(function() {
     var attr = $(this).attr('data-attr');
     if(attr == 'client'){
       $('#strtBtn').attr('data-target','#clientModal');
-    }else{
+    }else if(attr == 'fresher'){
+      $('#strtBtn').attr('data-target','#fresherModal');
+    }
+    else if(attr == 'professional'){
       $('#strtBtn').attr('data-target','#ProfessionalModal');
     }
 });

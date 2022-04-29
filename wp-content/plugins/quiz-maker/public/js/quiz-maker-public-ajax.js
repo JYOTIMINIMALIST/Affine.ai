@@ -760,7 +760,7 @@
             form.find('p.ays_score').removeClass('ays_score_display_none');
             form.find('p.ays_score').html(form.find('p.ays_score').text()+'<span class="ays_score_percent animated"> ' + response.score + '</span>');
             if(response.score == '100%'){
-                $('#showProForm').show();
+                $('.showProForm').show();
                 $('.gameStepOne').hide();
             }else{
                 $('.wrongState').show();
